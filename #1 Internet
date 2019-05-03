@@ -1,0 +1,52 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+{
+	int hours, price;
+	char promo;
+	cout << "Select your package from packages A, B, and C" << endl;
+	cin >> promo;
+	cout << "Enter the number of hours: " << endl;
+	cin >> hours;
+	switch (promo)
+	{
+	case 'a':
+	case 'A':
+		if (hours <= 10)
+		{
+			price = 995;
+			cout << "Php " << price << endl;
+		}
+		else
+		{
+			price = 995 + (20 * (hours - 10));
+			cout << "Php " << price << endl;
+		}
+		break;
+	case 'b':
+	case 'B':
+		if (hours <= 20)
+		{
+			price = 1495;
+			cout << "Php " << price << endl;
+		}
+		else
+		{
+			price = 1495 + (10 * (hours - 20));
+			cout << "Php " << price << endl;
+		}
+		break;
+	case 'c':
+	case 'C':
+		price = 1995;
+		cout << "Php " << price << endl;
+		break;
+	default:
+		cout << "Invalid promo!";
+	}
+	_getch();
+	return 0;
+}
