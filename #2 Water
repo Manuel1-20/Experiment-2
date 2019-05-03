@@ -1,0 +1,29 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	float demandc, consumpc, unpaidb, price, cpergal, gallons, gprev, gcurr;
+	demandc = 35.00;
+	cpergal = 1.10;
+	cout << "Enter gallon meter reading for this month" << endl;
+	cin >> gcurr;
+	cout << "Enter gallon meter reading for last month" << endl;
+	cin >> gprev;
+	cout << "Enter unpaid balance" << endl;
+	cin >> unpaidb;
+	gallons = gcurr - gprev;
+	consumpc = gallons * cpergal;
+	if (unpaidb <= 0)
+	{
+		price = demandc + consumpc;
+		cout << "Php " << price;
+	}
+	else
+	{
+		price = 20 + demandc + consumpc;
+		cout << "Php " << price;
+	}
+	_getch();
+	return 0;
+}
