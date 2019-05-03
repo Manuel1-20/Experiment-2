@@ -1,0 +1,24 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main()
+{
+	int x, y;
+	x = 1;
+	while (x > 0)
+	{
+		cout << "Enter Number" << endl;
+		cin >> x;
+		if (x > 0)
+		{
+			y = (x * (x + 1)) / 2;
+			cout << "The sum of all whole numbers from 1 to " << x << " is " << y << "." << endl;
+			continue;
+		}
+		else
+			cout << "Thank you!";		
+	}
+	_getch();
+	return 0;
+}
